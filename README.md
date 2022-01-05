@@ -15,21 +15,37 @@ We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+B
 Here are the libraries required to launch our code and see every graph we made. 
 
 import pandas as pd 
+
 import csv
+
 import matplotlib.pyplot as plt
+
 import seaborn as sn
+
 import numpy as np
+
 from sklearn.model_selection import train_test_split
+
 from sklearn.linear_model import LinearRegression
+
 from sklearn import metrics
+
 from sklearn.model_selection import GridSearchCV
+
 from sklearn.linear_model import Lasso
+
 from sklearn import linear_model
+
 from sklearn.tree import DecisionTreeRegressor
+
 from sklearn.ensemble import RandomForestRegressor
+
 from sklearn.datasets import make_regression
+
 import plotly.express as px
+
 import xgboost as xgb
+
 import pickle
 
 For the installation, the line you should use is the next one : 
