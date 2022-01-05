@@ -122,7 +122,7 @@ It is useful for persistence and data transfer over a network. We used it to sav
 
 We created a html file for the structure of the browser window of our Flask, it is called index.html and can be found in our Template file.
 
-Finally, our Flask code is called app.py and it must be ran before clicking on the link of our browser window. 
+Finally, our Flask code is called app.py and **it must be ran before clicking on the link of our browser window**. 
 
 You can find our Flask at this link : http://127.0.0.1:5000/
 
