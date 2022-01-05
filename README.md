@@ -13,7 +13,7 @@ We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+B
 SeoulBikeData.csv : the dataset we worked on.  
 Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.  
 Project_Python_Coussin_Darcos.ipynb : our code in Jupyter, with our graphs and models.  
-model.pkl : the best model for our data prediction.  
+model.pkl : it will be created when you run the Jupyter file (you don't have to do the grid searches that take a lot of time).  
 app.py : our Flask application to predict a value of RentedBikeCount with the parameters you entered.  
 index.html : the template we used for our Flask application.  
 
@@ -51,7 +51,7 @@ OR
 
 We did two types of graphics : 
 1. Histograms on one variable to see its distribution.
-2. Graphics between multiple variables to see how they interact with each other (we used mainly the library plotly).
+2. Graphics between multiple variables to see how they interact with each other (we used mainly the library plotly). **To see them you will need to run the Jupyter file**
 
 You can see every graph in our Jupyter file : Projet_Python_Coussin_Darcos.ipynb
 
