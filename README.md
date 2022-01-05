@@ -10,12 +10,12 @@ We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+B
 
 ## What you will find in this depository
 
-SeoulBikeData.csv : the dataset we worked on. 
-Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.
-Project_Python_Coussin_Darcos.ipynb : our code in Jupyter, with our graphs and models.
-model.pkl : the best model for our data prediction.
-app.py : our Flask application to predict a value of RentedBikeCount with the parameters you entered.
-index.html : the template we used for our Flask application. 
+SeoulBikeData.csv : the dataset we worked on.  
+Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.  
+Project_Python_Coussin_Darcos.ipynb : our code in Jupyter, with our graphs and models.  
+model.pkl : the best model for our data prediction.  
+app.py : our Flask application to predict a value of RentedBikeCount with the parameters you entered.  
+index.html : the template we used for our Flask application.  
 
 
 # 1. Data vizualisation
@@ -24,43 +24,27 @@ index.html : the template we used for our Flask application.
 
 Here are the libraries required to launch our code and see every graph we made. 
 
-import pandas as pd 
-
-import csv
-
-import matplotlib.pyplot as plt
-
-import seaborn as sn
-
-import numpy as np
-
-from sklearn.model_selection import train_test_split
-
-from sklearn.linear_model import LinearRegression
-
-from sklearn import metrics
-
-from sklearn.model_selection import GridSearchCV
-
-from sklearn.linear_model import Lasso
-
-from sklearn import linear_model
-
-from sklearn.tree import DecisionTreeRegressor
-
-from sklearn.ensemble import RandomForestRegressor
-
-from sklearn.datasets import make_regression
-
-import plotly.express as px
-
-import xgboost as xgb
-
-import pickle
+import pandas as pd  
+import csv  
+import matplotlib.pyplot as plt  
+import seaborn as sn  
+import numpy as np  
+from sklearn.model_selection import train_test_split  
+from sklearn.linear_model import LinearRegression  
+from sklearn import metrics  
+from sklearn.model_selection import GridSearchCV  
+from sklearn.linear_model import Lasso  
+from sklearn import linear_model  
+from sklearn.tree import DecisionTreeRegressor  
+from sklearn.ensemble import RandomForestRegressor  
+from sklearn.datasets import make_regression  
+import plotly.express as px  
+import xgboost as xgb  
+import pickle  
 
 For the installation, the line you should use is the next one : 
-`pip install [name of the library]`
-OR
+`pip install [name of the library]`  
+OR  
 `!pip install [name of the library]` if you do it directly on Jupyter
 
 ## The graphs
