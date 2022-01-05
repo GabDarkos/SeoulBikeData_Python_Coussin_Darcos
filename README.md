@@ -8,7 +8,7 @@ We also needed to predict the Rented Bike count (Count of bikes rented at each h
 In order to do so, we built various models and kept the one giving us the best accuracy on the predictions on the test set (the minimum MSE).
 We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand).
 
-## What you will find in this depository
+## What you will find in this repository
 
 SeoulBikeData.csv : the dataset we worked on.  
 Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.  
