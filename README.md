@@ -61,7 +61,7 @@ You can see every graph in our Jupyter file : Projet_Python_Coussin_Darcos.ipynb
 We had to predict how much bikes will be rented in a particular situation (hour, temperature, holiday, etc...)
 
 RentedBikeCount is a continuous variable.
-Hence, we will use models which predict a value and not a label : linear regression, lasso, decision tree and random forest.  
+Hence, we will use models which predict a value and not a label : linear regression, lasso, decision tree, random forest and XGboost.  
 
 To find the best values for the parameters of a model, we did a grid search.
 
@@ -109,10 +109,11 @@ We found a MSE of 45.044.
 
 ## Choice of the model
 
-The model with the best MSE was XGBoost. However, we encountered some problems of conversion that forced us to put final_features = false, which was risky. 
+The model with the best MSE was XGBoost. However, we encountered some problems of conversion that forced us to put validation_features = false, which was risky because you could
+enter any values and it would not be checked. 
 Plus, there was a difference of only 1 between the best and second best MSEs. 
 
-Hence, we chose the RandomForest model with a MSE of 45.044. 
+Hence, we chose the RandomForest model with a MSE of 46.945. 
 
 
 # 3. Flask
@@ -129,8 +130,3 @@ You can find our Flask at this link : http://127.0.0.1:5000/
 
 Thanks for your reading, we hope you will enjoy our project !
 Artémis and Gabriel
-
-
-
-
-
