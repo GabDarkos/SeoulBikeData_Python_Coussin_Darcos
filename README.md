@@ -73,36 +73,36 @@ We found a MSE of 104,77.
 
 ## Lasso
 
-We used these values on the parameters : 
-alpha = 0.0
-max_iter = 1000
+We used these values on the parameters :  
+alpha = 0.0  
+max_iter = 1000  
 
 We found a MSE of 104,85.
 
 ## Decision Tree
 
-We used these values on the parameters : 
-criterion = 'friedman_mse'
-max_depth = 7
-splitter = 'best'
+We used these values on the parameters :  
+criterion = 'friedman_mse'  
+max_depth = 7  
+splitter = 'best'  
 
 We found a MSE of 63.737.
 
 ## RandomForest
 
-We used these values on the parameters : 
-max_depth = 18
-n_estimators = 300
+We used these values on the parameters :  
+max_depth = 18  
+n_estimators = 300  
 
 We found a MSE of 46.945.
 
 ## XGBoost
 
-We used these values on the parameters :
-max_depth = 7
-learning_rate = 0.1
-colsample_bytree = 0.9
-alpha = 12
+We used these values on the parameters :  
+max_depth = 7  
+learning_rate = 0.1  
+colsample_bytree = 0.9  
+alpha = 12  
 n_estimators = 200. 
 
 We found a MSE of 45.044.
