@@ -74,8 +74,8 @@ We found a MSE of 104,77.
 ## Lasso
 
 We used these values on the parameters :  
-alpha = 0.0  
-max_iter = 1000  
+alpha = 7   
+max_iter = 100000  
 
 We found a MSE of 104,85.
 
