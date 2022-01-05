@@ -8,6 +8,16 @@ We also needed to predict the Rented Bike count (Count of bikes rented at each h
 In order to do so, we built various models and kept the one giving us the best accuracy on the predictions on the test set (the minimum MSE).
 We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand).
 
+## What you will find in this depository
+
+SeoulBikeData.csv : the dataset we worked on. 
+Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.
+Project_Python_Coussin_Darcos.ipynb : our code in Jupyter, with our graphs and models.
+model.pkl : the best model for our data prediction.
+app.py : our Flask application to predict a value of RentedBikeCount with the parameters you entered.
+index.html : the template we used for our Flask application. 
+
+
 # 1. Data vizualisation
 
 ## Environment and tools
