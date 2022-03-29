@@ -75,8 +75,8 @@ You can find the algorithm in the file [chatbot.py] (https://github.com/Benjamin
 |----------------|----------------------------|
 | Artist         | "music_name" : [<br>".* of ( .* )" ,<br>".* wrote ( .* )",<br>".* composed ( .* )"] |
 | genre          | "music_name" : [<br>".* of ( .* )" ]| 
-| information    | "music_name" : [<br>".*about ( .* ) by.*"],<br>"artist_name" : [<br>".* by ( .* )"] |
-| random_music   | "genre" : [<br>".* random ( .* ) music .*"<br>],<br>"information" : [<br>".* with ( .* )"] |
+| information    | "music_name" : [<br>".*about ( .* ) by.* "],<br>"artist_name" : [<br>". * by ( .* )"] |
+| random_music   | "genre" : [<br>".* random ( .* ) music .* "<br>],<br>"information" : [<br>". * with ( .* )"] |
 
 
 
