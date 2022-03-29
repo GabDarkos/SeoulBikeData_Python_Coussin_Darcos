@@ -1,132 +1,128 @@
-# Final Projet of Python for Data Analysis
-by Artémis Coussin and Gabriel Darcos
+# Discord Chatbot - HitBotx - DIA2
 
-## Description of the problem
+## Members
+- Benjamin DEMOUGE
+- Gabriel DARCOS
+- Artémis COUSSIN
+- Enzo CUNY
 
-We had to analyze the Seoul Bike Sharing Demand Data Set using data visualization to show the links between the variables. 
-We also needed to predict the Rented Bike count (Count of bikes rented at each hour) using the parameters we found relevant.
-In order to do so, we built various models and kept the one giving us the best accuracy on the predictions on the test set (the minimum MSE).
-We found the data on this [link](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand).
+## Description
 
-## What you will find in this repository
-
-SeoulBikeData.csv : the dataset we worked on.  
-Report_Coussin_Darcos.pptx : a power point explaining our project in every detail.  
-Project_Python_Coussin_Darcos.ipynb : our code in Jupyter, with our graphs and models.  
-model.pkl : it will be created when you run the Jupyter file (you don't have to do the grid searches that take a lot of time).  
-app.py : our Flask application to predict a value of RentedBikeCount with the parameters you entered.  
-index.html : the template we used for our Flask application.  
-
-
-# 1. Data vizualisation
-
-## Environment and tools
-
-Here are the libraries required to launch our code and see every graph we made. 
-
-import pandas as pd  
-import csv  
-import matplotlib.pyplot as plt  
-import seaborn as sn  
-import numpy as np  
-from sklearn.model_selection import train_test_split  
-from sklearn.linear_model import LinearRegression  
-from sklearn import metrics  
-from sklearn.model_selection import GridSearchCV  
-from sklearn.linear_model import Lasso  
-from sklearn import linear_model  
-from sklearn.tree import DecisionTreeRegressor  
-from sklearn.ensemble import RandomForestRegressor  
-from sklearn.datasets import make_regression  
-import plotly.express as px  
-import xgboost as xgb  
-import pickle  
-
-For the installation, the line you should use is the next one : 
-`pip install [name of the library]`  
-OR  
-`!pip install [name of the library]` if you do it directly on Jupyter
-
-## The graphs
-
-We did two types of graphics : 
-1. Histograms on one variable to see its distribution.
-2. Graphics between multiple variables to see how they interact with each other (we used mainly the library plotly). **To see them you will need to run the Jupyter file**
-
-You can see every graph in our Jupyter file : Projet_Python_Coussin_Darcos.ipynb
+Going to work, trying to sleep, organizing a party, doing sport...
+What do all these situations have in common ? A lot of people listen to music in them !
+We wanted to create a chatbot capable to give informations about several musics, like their genre, their artist or even some statistics (danceability, energy...)
+Furthermore, we wanted to create a recommendation system to recommend music to the users based on their tastes. 
+On Discord, the user can look for a music based on its name. Once he searched it, our bot will not only return the informations about the music but also the youtube link if it exists. 
+Then, the user can rate the music directly on Discord with emojis from 0 to 5. That's where our recommendation system can be used. 
+After searching at least 3 musics, the user can ask the bot "What should I listen to ?" and our bot will send him the link of a video corresponding to his tastes. 
 
 
-# 2. Predict RentedBikeCount
-
-We had to predict how much bikes will be rented in a particular situation (hour, temperature, holiday, etc...)
-
-RentedBikeCount is a continuous variable.
-Hence, we will use models which predict a value and not a label : linear regression, lasso, decision tree, random forest and XGboost.  
-
-To find the best values for the parameters of a model, we did a grid search.
-
-We measured the accuracy of each model using the MSE (Mean Squared Error). 
-
-## Linear Regression
-
-We found a MSE of 104,77.
-
-## Lasso
-
-We used these values on the parameters :  
-alpha = 7   
-max_iter = 100000  
-
-We found a MSE of 104,85.
-
-## Decision Tree
-
-We used these values on the parameters :  
-criterion = 'friedman_mse'  
-max_depth = 7  
-splitter = 'best'  
-
-We found a MSE of 63.737.
-
-## RandomForest
-
-We used these values on the parameters :  
-max_depth = 18  
-n_estimators = 300  
-
-We found a MSE of 46.945.
-
-## XGBoost
-
-We used these values on the parameters :  
-max_depth = 7  
-learning_rate = 0.1  
-colsample_bytree = 0.9  
-alpha = 12  
-n_estimators = 200. 
-
-We found a MSE of 45.044.
-
-## Choice of the model
-
-The model with the best MSE was XGBoost. However, we encountered some problems of conversion that forced us to put validation_features = false, which was risky because you could
-enter any values and it would not be checked. 
-Plus, there was a difference of only 1 between the best and second best MSEs. 
-
-Hence, we chose the RandomForest model with a MSE of 46.945. 
+## Bot Info
+- Chatbot platform: Discord
+- [Chat with bot](https://discord.gg/uHeMfQTt) (You must download the Python code and launch it before starting to chat)
+- [Working video of this bot](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE) OUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 
-# 3. Flask
+### Used API
 
-The pickle module (standard in Python) allows the serialization of memory objects into strings (and vice versa). 
-It is useful for persistence and data transfer over a network. We used it to save our RandomForest model from our Jupyter code : it's the file called model.pkl
+First of all, we used a Discord API so that the users could chat with our bot on this very spread platform. 
+It was really useful to use a Discord API because in our code it was easy to gather the data about the user talking to the chatbot and the musivcs he was looking for.
 
-We created a html file for the structure of the browser window of our Flask, it is called index.html and can be found in our Template file.
-
-Finally, our Flask code is called app.py and **it must be ran before clicking on the link of our browser window**. 
-
-You can find our Flask at this link : http://127.0.0.1:5000/
+After that we had the idea of using a Youtube API to show the video clip of each music the user looks for. 
+However, with this free Youtube API we can only look for 1000 music informations a day. 
+Hence, we had to use 3 Youtube API keys in order to do as many queries as we wanted while testing our chatbot. 
 
 
-Thanks for your reading, we hope you will enjoy our project !
-Artémis and Gabriel
+### Used Dataset
+
+The dataset we used already existed but we changed it a lot to keep only the informations that could interest the user when he looks for a particular music. 
+It is called "Prediction of music genre", ou can find the dataset on this Kaggle page : [Kaggle] (https://www.kaggle.com/datasets/vicsuperman/prediction-of-music-genre?select=music_genre.csv)
+
+
+## Recommender System
+
+When the user asks something about a music to the bot, the bot sends him a message on Discord with the informations he asked and the video clip of the music. 
+There, the user have the possibility to rate the music by reacting 0, 1, 2, 3, 4 or 5 to the message containing the informations.
+Each time the user rates a music, his rating is added to a dataframe called "users", with the Discord username of the user reacting to the message, the rate he gaves and the informations about the music.
+
+For our recommender system, we create another dataframe called "df_users" in which we want to have each username and some variables to understand what genre he prefers.
+To do so, we code a one-hot-encoder with the music genres existing in the music dataset, which are :
+'Electronic', 'Anime', 'Jazz', 'Alternative', 'Country', 'Rap', 'Blues', 'Rock', 'Classical', 'Hip-Hop'
+For each username present in our "users" dataframe, we sum up the ratings by music genre with the function df_users = df_users.groupby(by = 'username').sum()
+We also let the variables danceability, energy, popularity and tempo which can be useful to see what kind of music the user prefers (energic, calm, popular, etc...)
+
+Then we use the following cosine functions to see the proximity between the user and the musics of the dataset : 
+def cosine_distance(user_score,df):
+	instance_id = df['instance_id']
+	df_values = df['danceability','energy','tempo','popularity','Electronic','Anime','Jazz','Alternative','Country','Rap','Blues','Rock','Classical','Hip-Hop']
+	return (int(instance_id),100*round(np.inner(user_score,df_values)/(np.linalg.norm(user_score)*np.linalg.norm(df_values)),3))
+
+def df_cosine_similarity(user_score, df):
+	df_values = df['danceability','energy','tempo','popularity','Electronic','Anime','Jazz','Alternative','Country','Rap','Blues','Rock','Classical','Hip-Hop']
+	return df.apply(lambda x: cosine_distance(user_score, x), axis=1).sort_values(ascending=False).head(1)
+
+
+## Language Processing
+
+We used Deep Learning in our code to recognize the different intents even with some errors in the writing. 
+You can find the algorithm in the file [chatbot.py] (https://github.com/BenjaminDemouge/Hitbotx/blob/master/chatbot.py)
+
+
+### Intents and Entities
+
+
+| Intent         | Entities                   |
+|----------------|----------------------------|
+| Artist         | "music_name" : [           |
+|                |  ".* of (.*)" ,            |
+|                |  ".* wrote (.*)",          |
+|                |  ".* composed (.*)"]       |
+|----------------|----------------------------|
+| genre          | "music_name" : [           |
+|                |  ".* of (.*)" ]            |  
+|----------------|----------------------------|
+| information    | "music_name" : [           |
+|                |  ".*about (.*) by.*"],     |
+|                | "artist_name" : [          |
+|				 |  ".* by (.*)"]             |
+|----------------|----------------------------|
+| random_music   | "genre" : [                |
+|                |  ".* random (.*) music .*" |
+|                |  ],                        |
+|                | "information" : [          |
+|                |   ".* with (.*)"]          |
+
+
+
+## Scenarios
+Please describe all the possible scenarios in your chatbot.
+### scenario 1:
+| User | Bot                                                     |
+|------|---------------------------------------------------------|
+| Hi   | Welcome to my chatbot😊                                  |
+|      | You can use this chat bot using the following examples: |
+|      | Hi<br>How are you?<br>I want a pizza                    |
+
+### scenario 2:
+| User              | Bot                                                      |
+|-------------------|----------------------------------------------------------|
+| I want a pizza    | which kind of pizza do you like?<br> Margherita or Greek |
+| Margherita please | ok your order is registered. <br> have a nice day.       |
+
+
+| User                      | Bot                                                |
+|---------------------------|----------------------------------------------------|                      
+| I want a pizza margherita | ok your order is registered. <br> have a nice day. |
+
+please enter three examples per each scenario
+
+
+
+
+It could have been sufficient to give the informations on the music the user was looking for in a simple message on Discord. However, we found it more user-friendly to give out the youtube link of the song. This way, the user can immediatly listen to the song he was looking for. 
+
+We have also put a lot of functions which were not asked, like a "random" function, where the user can juste ask to see a random music if he wants to discover new things. 
+He can do personnalized researches by indicating some parameter values (energy, danceability, tempo, etc...). 
+For example : "Give me a random rock or rap music with a high energy and low danceability ?"
+
+Feel free to have fun with our bot, we recommend you to rate at least 5 songs so the recommender system can be useful to you ;)
