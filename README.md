@@ -73,24 +73,10 @@ You can find the algorithm in the file [chatbot.py] (https://github.com/Benjamin
 
 | Intent         | Entities                   |
 |----------------|----------------------------|
-| Artist         | "music_name" : [           |
-|                |  ".* of (.*)" ,            |
-|                |  ".* wrote (.*)",          |
-|                |  ".* composed (.*)"]       |
-|----------------|----------------------------|
-| genre          | "music_name" : [           |
-|                |  ".* of (.*)" ]            |  
-|----------------|----------------------------|
-| information    | "music_name" : [           |
-|                |  ".*about (.*) by.*"],     |
-|                | "artist_name" : [          |
-|				 |  ".* by (.*)"]             |
-|----------------|----------------------------|
-| random_music   | "genre" : [                |
-|                |  ".* random (.*) music .*" |
-|                |  ],                        |
-|                | "information" : [          |
-|                |   ".* with (.*)"]          |
+| Artist         | "music_name" : [<br>".* of (.*)" ,<br>".* wrote (.*)",<br>".* composed (.*)"] |
+| genre          | "music_name" : [<br>".* of (.*)" ]| 
+| information    | "music_name" : [<br>".*about (.*) by.*"],<br>"artist_name" : [<br>".* by (.*)"] |
+| random_music   | "genre" : [<br>".* random (.*) music .*"<br>],<br>"information" : [<br>".* with (.*)"] |
 
 
 
